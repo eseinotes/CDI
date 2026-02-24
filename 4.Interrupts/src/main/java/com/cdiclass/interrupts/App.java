@@ -41,7 +41,8 @@ public class App {
         // join(): esperamos a que todos terminen (apagado ordenado)
         for (Thread t : threads) {
             try {
-                System.out.println(t.isInterrupted());
+                // ¿qué pasa aquí?
+                //System.out.println(t.isInterrupted());
                 t.join();
             } catch (InterruptedException ex) {
                 

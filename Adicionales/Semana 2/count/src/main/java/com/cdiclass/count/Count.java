@@ -1,0 +1,35 @@
+package com.cdiclass.count;
+
+import java.util.Scanner;
+
+public class Count {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Cuantos hilos quieres crear? ");
+        int numThreads = sc.nextInt();
+        
+        Thread[] threads = new Thread[numThreads];
+        
+        for (int i = 0; i < numThreads; i++){
+            MyThread r = new MyThread();
+            threads[i] = new Thread(r);
+            threads[i].start();
+        }
+        
+        
+        for (int i = 0; i < numThreads; i++){
+            try {
+                threads[i].join();
+            } catch (InterruptedException ex) {
+                System.out.println("Thread Interruption exception");
+            }
+        }
+        
+        System.out.println("Fin del programa");
+        
+        // System.out.println("Contador total "+ MyThread.count);
+        
+    }
+}

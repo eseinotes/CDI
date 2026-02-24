@@ -1,0 +1,3 @@
+com\cdiclass\lock\Counter.class
+com\cdiclass\lock\Lock.class
+com\cdiclass\lock\MyThread.class
