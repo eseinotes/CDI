@@ -6,3 +6,6 @@
 /5.MutualExclusion/target/
 /6.Semaphore/target/
 .DS_Store
+/.idea
+/7.WaitAndNotify/target/
+
